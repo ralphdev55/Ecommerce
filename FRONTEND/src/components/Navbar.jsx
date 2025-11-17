@@ -29,7 +29,7 @@ function Navbar() {
 
       {/* 3. Iconos de Navegación */}
       <div className="flex items-center space-x-10 ">
-        <Link to={"./app"} className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
+        <Link to={"./"} className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
           <FaHome size={24} />
           <span className="text-sm mt-1">Inicio</span>
         </Link>

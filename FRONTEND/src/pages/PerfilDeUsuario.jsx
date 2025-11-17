@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 
 import Crear_Producto from '../components/Crear_Producto.jsx';
-// (Importa aquí cualquier otro ícono o componente que necesites)
-
-// --- COMPONENTE PRINCIPAL DE LA PÁGINA ---
 
 const PerfilDeUsuario = () => {
   const [user, setUser] = useState(null);
@@ -168,11 +165,11 @@ const API_URL = process.env.REACT_APP_API_URL;
                         <span className="text-xl"></span> Añadir productos
                 </button>
 
-                <a href="my-products" 
+                <Link href="my-products" 
                 className={`flex items-center gap-3 w-full py-3 px-4 rounded-lg transition-colors text-left
                         ${activeSection === 'create' ? 'bg-blue-100 text-blue-700 font-semibold' : 'hover:bg-gray-100 text-gray-600'}`} >
                 <span className="text-xl"></span> Mis productos
-                </a>
+                </Link>
 
               </nav>
             </div>

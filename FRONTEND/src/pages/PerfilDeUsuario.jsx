@@ -36,7 +36,7 @@ const PerfilDeUsuario = () => {
         return;
       }
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
       // 3. Hacemos la petición a la API de perfil
       fetch(`${API_URL}/api/profile/`, {
         method: 'GET',

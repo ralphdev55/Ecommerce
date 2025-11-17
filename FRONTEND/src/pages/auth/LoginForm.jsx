@@ -14,7 +14,7 @@ function LoginForm() {
     setError(null);
     setIsLoading(true);
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
     fetch(`${API_URL}/api/login/`, {
       method: 'POST',

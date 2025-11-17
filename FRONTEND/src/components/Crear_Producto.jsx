@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // URL de tu API
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 // --- CAMBIOS ---
 // 1. El componente ahora es un "Modal"

@@ -43,7 +43,7 @@ return (
 );
 };
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 // --- COMPONENTE PRINCIPAL DE LA PÁGINA ---
 const MisCompras = () => {
 // Estados para guardar los datos, el estado de carga y los errores

@@ -6,7 +6,7 @@ import ConfirmBuys from '../components/confir_buys';
 
 
 // --- Constante de la API ---
-const API_URL = 'http://127.0.0.1:8000';
+const API_URL = process.env.REACT_APP_API_URL;
 
 // Componente para mostrar estrellas
 const RatingStars = ({ rating }) => (

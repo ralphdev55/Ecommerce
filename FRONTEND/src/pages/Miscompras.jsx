@@ -43,7 +43,7 @@ return (
 );
 };
 
-
+const API_URL = process.env.REACT_APP_API_URL;
 // --- COMPONENTE PRINCIPAL DE LA PÁGINA ---
 const MisCompras = () => {
 // Estados para guardar los datos, el estado de carga y los errores
@@ -55,7 +55,7 @@ const [error, setError] = useState(null);
 useEffect(() => {
     // Definimos la URL de tu API
     const token = localStorage.getItem('authToken');
-    const apiUrl = 'http://127.0.0.1:8000/api/historial/';
+    const apiUrl = `${API_URL}/api/historial/`;
     if (!token) {
     setError('No estás autenticado. Por favor, inicia sesión.');
     setIsLoading(false);

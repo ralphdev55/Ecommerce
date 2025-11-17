@@ -39,8 +39,9 @@ const PerfilDeUsuario = () => {
         return;
       }
 
+const API_URL = process.env.REACT_APP_API_URL;
       // 3. Hacemos la petición a la API de perfil
-      fetch('http://127.0.0.1:8000/api/profile/', {
+      fetch(`${API_URL}/api/profile/`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../components/ProductCard'; // Ajusta la ruta si es necesario
 
-const API_URL = 'http://127.0.0.1:8000';
+const API_URL = process.env.REACT_APP_API_URL;
 
 // --- Componente de la Página ---
 const ProductosPage = () => {

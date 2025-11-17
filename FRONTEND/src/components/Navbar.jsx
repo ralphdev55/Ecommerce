@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 // Importamos los iconos que vamos a usar
 import { FaSearch, FaHome, FaInfoCircle, FaShoppingCart, FaUser } from 'react-icons/fa';
 
@@ -33,15 +34,15 @@ function Navbar() {
           <span className="text-sm mt-1">Inicio</span>
         </a>
 
-        <a href="../../App/Miscompras" className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
+        <Link to={"/Miscompras"} className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
           <FaShoppingCart size={24} />
           <span className="text-sm mt-1">Compras</span>
-        </a>
+        </Link>
 
-        <a href="../../App/perfil" className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
+        <Link to={"/App/perfil"} className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
           <FaUser size={24} />
           <span className="text-sm mt-1">Perfil</span>
-        </a>
+        </Link>
 
         <a href="../../App/perfil" className="flex flex-col items-center text-gray-600 hover:text-blue-600 md:hidden">
           <span className="text-sm mt-1">Hamburguesa</span>

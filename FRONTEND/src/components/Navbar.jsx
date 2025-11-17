@@ -29,17 +29,17 @@ function Navbar() {
 
       {/* 3. Iconos de Navegación */}
       <div className="flex items-center space-x-10 ">
-        <a href="./" className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
+        <Link to={"./app"} className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
           <FaHome size={24} />
           <span className="text-sm mt-1">Inicio</span>
-        </a>
+        </Link>
 
-        <Link to={"/Miscompras"} className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
+        <Link to={"/app/Miscompras"} className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
           <FaShoppingCart size={24} />
           <span className="text-sm mt-1">Compras</span>
         </Link>
 
-        <Link to={"/App/perfil"} className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
+        <Link to={"/app/perfil"} className="flex flex-col items-center text-gray-600 hover:text-blue-600  md:flex">
           <FaUser size={24} />
           <span className="text-sm mt-1">Perfil</span>
         </Link>

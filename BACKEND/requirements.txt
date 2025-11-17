@@ -11,6 +11,7 @@ colorama==0.4.6
 cookiecutter==2.6.0
 cryptography==46.0.3
 defusedxml==0.7.1
+dj-database-url==3.0.1
 Django==5.2.7
 django-cors-headers==4.9.0
 django-tailwind==4.4.1

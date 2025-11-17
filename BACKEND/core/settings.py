@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 from datetime import timedelta
+import dj_database_url
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,17 +86,16 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ecommerce',
-        'USER': 'postgres',
-        'PASSWORD': '4505',
-        'HOST': '',
-        'PORT': '5432',
-    }
-}
+LOCAL_DATABASE_URL = 'postgres://postgres:4505@127.0.0.1:5432/ecommerce'
 
+DATABASES = {
+    'default': dj_database_url.config(
+        # Busca la variable 'DATABASE_URL' de Render.
+        # Si no la encuentra, usa tu base de datos local.
+        default=LOCAL_DATABASE_URL,
+        conn_max_age=600
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

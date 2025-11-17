@@ -165,7 +165,7 @@ const API_URL = import.meta.env.VITE_API_URL;
                         <span className="text-xl"></span> Añadir productos
                 </button>
 
-                <Link to={"my-products"}
+                <Link to={"app/my-products"}
                 className={`flex items-center gap-3 w-full py-3 px-4 rounded-lg transition-colors text-left
                         ${activeSection === 'create' ? 'bg-blue-100 text-blue-700 font-semibold' : 'hover:bg-gray-100 text-gray-600'}`} >
                 <span className="text-xl"></span> Mis productos

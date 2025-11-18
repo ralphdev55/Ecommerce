@@ -150,6 +150,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:5173",
     'https://ecommerce-git-main-ralphs-projects-e12fd492.vercel.app',
+    'https://ecommerce-eight-xi-11.vercel.app',
     # ...
 ]
 

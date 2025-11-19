@@ -182,7 +182,34 @@ SIMPLE_JWT = {
     'TOKEN_REFRESH_SERIALIZER': 'rest_framework_simplejwt.serializers.TokenRefreshSerializer',
 }
 
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
+# 2. Configuración del Bucket y Región
+AWS_STORAGE_BUCKET_NAME = 'media'  # Asegúrate de crear este bucket en Supabase
+AWS_S3_REGION_NAME = 'us-east-1'
+
+# 3. Endpoint de Conexión (Para subir archivos - Protocolo S3)
+# Nota: Corregido según tu captura de pantalla (añadido .storage)
+AWS_S3_ENDPOINT_URL = 'https://rvekyzbblaziwhvjecrr.storage.supabase.co/storage/v1/s3'
+
+# 4. Configuraciones requeridas por Supabase
+AWS_S3_ADDRESSING_STYLE = "path"     # IMPORTANTE: Supabase necesita estilo 'path'
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+
+# 5. Configuración de Archivos Estáticos/Media
+AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+AWS_DEFAULT_ACL = 'public-read'      # Los archivos serán públicos
+AWS_S3_FILE_OVERWRITE = False        # No sobrescribir si tienen el mismo nombre
+AWS_QUERYSTRING_AUTH = False         # No generar URLs firmadas con expiración
+
+# 6. URL Pública (Para ver las imágenes)
+# Usamos la URL HTTP estándar de Supabase para servir los archivos
+AWS_S3_CUSTOM_DOMAIN = 'rvekyzbblaziwhvjecrr.supabase.co/storage/v1/object/public/media'
+
+# 7. Decirle a Django que use S3 para MEDIA
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/'
 
 # AÑADE ESTAS DOS LÍNEAS:
 

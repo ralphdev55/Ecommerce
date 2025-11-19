@@ -183,5 +183,6 @@ SIMPLE_JWT = {
 }
 
 
+
 # AÑADE ESTAS DOS LÍNEAS:
 
